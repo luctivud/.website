@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+@font-face {
+  font-family: MeryQolby;
+  src: url(MeryQolby.otf);
+}
 
 *{
   color: white;
+  text-decoration: none;
 }
 
 :root {
@@ -14,19 +19,18 @@
 
 body {
 	margin: 0;
-	background: #000;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
 }
 
 .content {
   height: 200vh;
-  background:black;
+  background:#0d1521;
   display: grid;
   place-items: center;
 }
 
-/* navigation styles start here */
+/* navigation bar styling starts here */
 
 header {
   background: var(--background);
@@ -36,8 +40,7 @@ header {
   width: 100%;
 }
 
-/* changed this from the tutorial video to
-   allow it to gain focus, making it tabbable */
+/*allow it to gain focus, making it tabbable */
 .nav-toggle {
   position: absolute !important;
   top: -9999px !important;
@@ -64,7 +67,6 @@ header {
 .nav-toggle-label span::after {
   display: block;
   background: white;
-  height: 2px;
   width: 2em;
   border-radius: 2px;
   position: relative;
@@ -110,18 +112,19 @@ nav li {
 }
 
 nav a {
-  color: white;
+  color: rgba(256,256,256,.75);
   font-weight:bolder;
   text-decoration: none;
   display: block;
   font-size: 1.2rem;
+  margin-top: 12px;
   text-transform: uppercase;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
 
 nav a:hover {
-  color: #000;
+  color: white;
   background-color:  rgba(255, 0, 0, .85);
   backface-visibility: .2;
   background-repeat: repeat-x;
@@ -148,9 +151,14 @@ nav a:hover {
 
   .logo {
     grid-column: 2 / 3;
-    text-transform: uppercase;
-    height: 20px;
+    height: 35px;
     margin-top: 8px;
+  }
+  .logo a{
+    text-decoration: none;
+    font-family: MeryQolby;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
   }
 
   nav {
@@ -204,39 +212,34 @@ nav a:hover {
   }
 }
 
-/*styling content*/
+/*styling content common for all*/
 p{
-  background-color: #111;
-  text-decoration: none;
+  background-color: #090d13;
   font-family: monospace;
   line-height: 20px;
   letter-spacing: 2px;
 }
 
 h2{
-  background-color: #111;
-  text-decoration: none;
+  background-color:#090d16;
   font-family: monospace;
   line-height: 20px;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
 }
 
 .container:hover h2{
-  background-color: black;
-  text-decoration: none;
   color:red;
-  font-family: monospace;
 }
+
+/* styling section-wise*/
 
 #section-1 p{
   margin-left: 4%; margin-right: 30%; margin-top: 0px;
-  border:1px solid red; border-top: none;
   padding: 20px;
 }
 
 
 #section-1 h2{
   padding:20px 30px;
-  border:1px solid red; border-bottom: 1px dotted red;
   margin-left: 4%; margin-right: 30%; margin-bottom: 0px; margin-top: 80px;
 }
