@@ -20,13 +20,11 @@
 body {
 	margin: 0;
 	font-family: 'Work Sans', sans-serif;
+  background:#0d1521;
 	font-weight: 400;
 }
 
 .content {
-  height: 200vh;
-  background:#0d1521;
-  display: grid;
   place-items: center;
 }
 
